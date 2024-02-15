@@ -1,0 +1,78 @@
+CUDNN:
+  BENCHMARK: true
+  DETERMINISTIC: false
+  ENABLED: true
+DATASET:
+  IS_GRAY: false
+  LFW_CLASS: 6000
+  LFW_OCC_PATH: data/datasets/lfw-occ/lfw-112X96_masked/
+  LFW_PAIRS: data/datasets/lfw-occ/pairs.txt
+  LFW_PATH: data/datasets/lfw-occ/lfw-112X96/
+  LMDB_FILE: data/datasets/CASIA-112x96-LMDB.lmdb
+  MFR2_PAIRS: data/datasets/pairs.txt
+  MFR2_PATH: data/datasets/MFR2_Align_112x96/
+  NUM_CLASS: 10572
+  OLFW_PAIRS: data/datasets/O_LFW/O_O_Align_112x96/O_O_Flag_LR.txt
+  OLFW_PATH: data/datasets/O_LFW/O_O_Align_112x96/
+  RMFD_PAIRS: data/datasets/RMFD/masked_pairs.txt
+  RMFD_PATH: data/datasets/RMFD/masked_whn_algin_112x96_clean/
+  ROOT: ./datasets/CASIA-WebFace/
+  ROT_FACTOR: 20
+  SCALE_FACTOR: 0
+  TEST_DATASET: LFW
+  TRAIN_DATASET: WebFace
+LOSS:
+  TYPE: ArcMargin
+  WEIGHT_DIFF: 10
+  WEIGHT_MASK: 100
+  WEIGHT_PRED: 10.0
+NETWORK:
+  FACTOR: 1
+  IMAGE_SIZE:
+  - 112
+  - 96
+  PRETRAINED: ''
+  WEIGHT_FC: ''
+  WEIGHT_MODEL: ''
+TEST:
+  BATCH_SIZE: 32
+  MODE: Mask
+  MODEL_FILE: ''
+  SHUFFLE: false
+  STATE: ''
+  WORKERS: 0
+TRAIN:
+  ABLATION: false
+  BACKBONE_MODEL: LResNet50E_IR
+  BATCH_SIZE: 256
+  BINARY_THRES: 0
+  END_EPOCH: 40
+  GAMMA1: 0.99
+  GAMMA2: 0.0
+  GPUS: '0'
+  IOU:
+  - 0.2
+  - 0.8
+  LOG_DIR: log
+  LR: 0.1
+  LR_FACTOR: 0.1
+  LR_FREEZE: 0.1
+  LR_STEP:
+  - 15
+  - 30
+  MODE: Clean
+  MODEL: LResNet50E_IR_Occ
+  MOMENTUM: 0.9
+  NESTEROV: false
+  NUM_MASK: 101
+  OPTIMIZER: sgd
+  OUTPUT_DIR: output
+  PATTERN: 4
+  PRINT_FREQ: 100
+  RESUME: ''
+  RESUME_FC: ''
+  SHUFFLE: true
+  SOFT_BINARY: 0
+  START_EPOCH: 0
+  WD: 0.0005
+  WORKERS: 0
