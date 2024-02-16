@@ -1,19 +1,29 @@
 # LDCSN
 LDCSN: Lightweight Dual-branch Convolutional Self-attention Network for Masked Face Recognition
 
-#Train
+#Train model
 python train.py
+--cfg
+./experiments/CASIA-112x112-LDCSN.yaml
+--model
+"LResNet50_LDCSN"
+--batch_size
+32
+--gpus
+"0"
+--debug
+0
 
 # Test pretained model
 python test.py 
 --cfg
-./experiments/CASIA-112x96-LMDB.yaml
+./experiments/CASIA-112x112-LDCSN.yaml
 --model
-LResNet50_LDCSN
+"LResNet50_LDCSN"
 --batch_size
 64
 --gpus
-0
+"0"
 --debug
 0
 
