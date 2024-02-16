@@ -1,6 +1,9 @@
 # LDCSN
 LDCSN: Lightweight Dual-branch Convolutional Self-attention Network for Masked Face Recognition
 
+#Train
+python train.py
+
 # Test pretained model
 python test.py 
 --cfg
@@ -14,5 +17,6 @@ LResNet50_LDCSN
 --debug
 0
 
+# Pretrained model
 [预训练模型链接：](https://pan.baidu.com/s/1WT1IANT8nf5mPacvahjpVA)
 提取码：1q4g
