@@ -7,6 +7,10 @@ python train.py
 ./experiments/CASIA-112x112-LDCSN.yaml
 --model
 "LResNet50_LDCSN"
+--lr 
+0.01
+--optim
+'sgd'
 --batch_size
 32
 --gpus
